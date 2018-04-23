@@ -4,6 +4,7 @@ import List, { ListItem, ListItemIcon, ListItemText, ListSubheader } from 'mater
 import HomeIcon from '@material-ui/icons/Home';
 import AccountIcon from '@material-ui/icons/AccountBox';
 import LoginIcon from '@material-ui/icons/VpnKey';
+import { browserURLs } from '../constants';
 
 const MenuDrawer = props => {
   return (
@@ -18,25 +19,32 @@ const MenuDrawer = props => {
           component="nav"
           subheader={<ListSubheader>Conduit Menu</ListSubheader>}>
 
-          <ListItem button>
+          <ListItem button onClick={() => window.location.assign(browserURLs.home)}>
             <ListItemIcon>
               <HomeIcon/>
             </ListItemIcon>
             <ListItemText primary="Home"/>
           </ListItem>
 
-          <ListItem button>
-            <ListItemIcon>
-              <AccountIcon/>
-            </ListItemIcon>
-            <ListItemText primary="Account"/>
-          </ListItem>
-
-          <ListItem button>
+          <ListItem button onClick={() => window.location.assign(browserURLs.login)}>
             <ListItemIcon>
               <LoginIcon/>
             </ListItemIcon>
             <ListItemText primary="Login"/>
+          </ListItem>
+
+          <ListItem button onClick={() => window.location.assign(browserURLs.interact)}>
+            <ListItemIcon>
+              <AccountIcon/>
+            </ListItemIcon>
+            <ListItemText primary="Interact"/>
+          </ListItem>
+
+          <ListItem button onClick={() => window.location.assign(browserURLs.account)}>
+            <ListItemIcon>
+              <AccountIcon/>
+            </ListItemIcon>
+            <ListItemText primary="Account"/>
           </ListItem>
 
         </List>

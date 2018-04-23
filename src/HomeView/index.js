@@ -2,19 +2,11 @@ import React from 'react';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
-
-const styles = {
-  card: {
-    maxWidth: '600px',
-    margin: 'auto',
-    marginTop: '20px',
-    padding: '10px',
-  }
-};
+import { browserURLs, globalStyles } from '../constants';
 
 const HomeView = props => {
   return (
-    <div style={styles.card}>
+    <div style={globalStyles.card}>
       <Card>
         <CardContent>
           <Typography variant="headline" component={"h1"} style={{textAlign: 'center'}}>
@@ -28,7 +20,10 @@ const HomeView = props => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size={"small"} color="primary">Login</Button>
+          <Button
+            size={"small"}
+            color="primary"
+            onClick={() => window.location.assign(browserURLs.login)}>Login</Button>
           <Button size={"small"} color="primary">Github</Button>
         </CardActions>
       </Card>

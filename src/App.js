@@ -7,11 +7,12 @@ import IconButton from 'material-ui/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuDrawer from './MenuDrawer';
 import HomeView from './HomeView';
+import LoginView from './LoginView';
+import InteractView from './InteractView';
+import AccountView from './AccountView';
 import {
   Route,
 } from 'react-router-dom';
-
-
 
 class App extends Component {
 
@@ -42,6 +43,9 @@ class App extends Component {
             toggleDrawer={this.toggleDrawer} />
 
         <Route exact path="/" component={HomeView}/>
+        <Route exact path="/login" component={LoginView}/>
+        <Route exact path="/interact" component={InteractView}/>
+        <Route exact path="/account" component={AccountView}/>
 
       </div>
     );
