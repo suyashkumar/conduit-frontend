@@ -4,6 +4,7 @@ import List, { ListItem, ListItemIcon, ListItemText, ListSubheader } from 'mater
 import HomeIcon from '@material-ui/icons/Home';
 import AccountIcon from '@material-ui/icons/AccountBox';
 import LoginIcon from '@material-ui/icons/VpnKey';
+import CodeIcon from '@material-ui/icons/Code';
 import { browserURLs } from '../constants';
 
 const MenuDrawer = props => {
@@ -35,7 +36,7 @@ const MenuDrawer = props => {
 
           <ListItem button onClick={() => window.location.assign(browserURLs.interact)}>
             <ListItemIcon>
-              <AccountIcon/>
+              <CodeIcon/>
             </ListItemIcon>
             <ListItemText primary="Interact"/>
           </ListItem>
