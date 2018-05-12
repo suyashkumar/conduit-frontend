@@ -6,6 +6,7 @@ const browserURLs = {
 };
 
 const serverURL = "https://api.conduit.suyash.io";
+const githubURL = "https://github.com/suyashkumar/conduit";
 
 const globalStyles = {
   card: {
@@ -16,4 +17,4 @@ const globalStyles = {
   },
 };
 
-export {browserURLs, serverURL, globalStyles};
+export {browserURLs, serverURL, globalStyles, githubURL};

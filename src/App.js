@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuDrawer from './MenuDrawer';
@@ -13,6 +12,8 @@ import AccountView from './AccountView';
 import {
   Route,
 } from 'react-router-dom';
+import { GithubIcon } from './icons';
+import {githubURL} from "./constants";
 
 class App extends Component {
 
@@ -35,6 +36,14 @@ class App extends Component {
                   <Typography variant="title" color="inherit">
                      Conduit
                   </Typography>
+                <a
+                  href={githubURL}
+                  target="_blank"
+                  style={{position: 'absolute', right: '15px'}}>
+                  <IconButton>
+                    <GithubIcon style={{color: "white"}}/>
+                  </IconButton>
+                </a>
               </Toolbar>
           </AppBar>
 

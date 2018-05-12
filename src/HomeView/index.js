@@ -2,7 +2,7 @@ import React from 'react';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
-import { browserURLs, globalStyles } from '../constants';
+import { browserURLs, globalStyles, githubURL } from '../constants';
 
 const HomeView = props => {
   return (
@@ -24,7 +24,12 @@ const HomeView = props => {
             size={"small"}
             color="primary"
             onClick={() => window.location.assign(browserURLs.login)}>Login</Button>
-          <Button size={"small"} color="primary">Github</Button>
+          <Button
+            size={"small"}
+            color="primary"
+            onClick={() => window.open(githubURL)}>
+            Github
+          </Button>
         </CardActions>
       </Card>
     </div>
